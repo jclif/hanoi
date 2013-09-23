@@ -6,7 +6,7 @@ READER = readline.createInterface({
 });
 
 function Hanoi() {
-this.piles = [ [3, 2, 1], [], [] ];
+this.piles = [ [5, 4, 3, 2, 1], [], [] ];
 }
 
 Hanoi.prototype.run = function() {
@@ -14,7 +14,7 @@ Hanoi.prototype.run = function() {
 };
 
 Hanoi.prototype.has_won = function() {
-  good_pile_length = 3;
+  good_pile_length = 5;
   if (this.piles[1].length === good_pile_length || this.piles[2].length === good_pile_length) {
     return true;
   } else {
