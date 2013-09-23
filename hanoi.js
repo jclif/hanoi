@@ -6,10 +6,6 @@ READER = readline.createInterface({
 });
 
 function Hanoi() {
-  // this.pile1 = [1,2,3,4,5];
-//   this.pile2 = [];
-//   this.pile3 = [];
-
 this.piles = [ [3, 2, 1], [], [] ];
 }
 
@@ -38,7 +34,7 @@ Hanoi.prototype.getInputAndMove = function() {
      READER.close()
   } else {
     READER.question("Where would you like to move? '0 1' (from, to)", function(stringInput) {
-      var re = /(\d).*(\d)/;
+      var re = /^([012]) ([012])$/;
       reArray = re.exec(stringInput);
       if (re.test(stringInput) === false) {
         that.getInputAndMove();
